@@ -10,6 +10,7 @@ import android.widget.TextView;
 /**
  * Created by chennuo on 2015/5/16.
  */
+
 public class ViewHolder  {
     private SparseArray<View> mViews;
     private  int mPosition;
