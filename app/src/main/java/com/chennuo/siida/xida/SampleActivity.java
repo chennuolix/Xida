@@ -102,21 +102,21 @@ public class SampleActivity extends BaseActivity {
         mDrawerList.setAdapter(adapter);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
                         ;
+                        break;
                     case 1: //我的悉达
                         mDrawerToggle.setAnimateEnabled(false);
                         drawerArrow.setProgress(1f);
-                        boolean isExist = pref.getBoolean("isExist",false);  //判断是否已经验证过了此设备
-                        if (!isExist){
-                            Intent intent = new Intent(SampleActivity.this,RegisterActivity.class);
+                        boolean isExist = pref.getBoolean("isExist", false);  //判断是否已经验证过了此设备
+                        if (!isExist) {
+                            Intent intent = new Intent(SampleActivity.this, RegisterActivity.class);
                             startActivity(intent);
                             Log.d("IndexActivity", "To RegisterActivity");
                         } else {
-                            Intent intent1 = new Intent(SampleActivity.this,MySiida.class);
+                            Intent intent1 = new Intent(SampleActivity.this, MySiida.class);
                             startActivity(intent1);
                             Log.d("IndexActivity", "To SampleActivity");
                         }
@@ -124,7 +124,7 @@ public class SampleActivity extends BaseActivity {
                     case 2:  //消息中心
                         mDrawerToggle.setAnimateEnabled(false);
                         drawerArrow.setProgress(0f);
-                        Intent intent1 = new Intent(SampleActivity.this,NewsCentre.class);
+                        Intent intent1 = new Intent(SampleActivity.this, NewsCentre.class);
                         startActivity(intent1);
                         break;
                     case 3:   //设置
@@ -141,7 +141,7 @@ public class SampleActivity extends BaseActivity {
 //                        }
 //                        mDrawerToggle.syncState();
 //                        break;
-                        Intent signupIntent = new Intent(SampleActivity.this,SignupActivity.class);
+                        Intent signupIntent = new Intent(SampleActivity.this, SignupActivity.class);
                         startActivity(signupIntent);
 //                        Intent signupIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/IkiMuhendis/LDrawer"));
 //                        startActivity(signupIntent);
@@ -174,12 +174,38 @@ public class SampleActivity extends BaseActivity {
 
         initVideo();    //初始化视频列表
         initView();
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Intent intent = new Intent(SampleActivity.this, VideoPlayerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+
+                        break;
+
+
+
+
+
+
+
+
+                    /*   视频列表点击事件   */
+
+
+                }
+            }
+        });
     }
 
     private void initView() {
         mListView = (ListView) findViewById(R.id.list_of_video);
         mListView.setAdapter(videoAdapter);
     }
+
     private void initVideo(){
         mVideo = new ArrayList<Video>();
         Video video1 = new Video(R.drawable.yia);
@@ -212,6 +238,7 @@ public class SampleActivity extends BaseActivity {
         mVideo.add(video14);
         videoAdapter = new VideoAdapter(this,mVideo,R.layout.video_list);
     }
+
 
 
 

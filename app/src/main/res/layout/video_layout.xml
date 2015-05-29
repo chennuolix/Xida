@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pack">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2">
+
+        <TableRow>
+            <Button
+                android:id="@+id/information"
+                android:layout_width="match_parent"
+                android:layout_span="1"
+                android:textColor="@color/white"
+                android:text="详细信息"
+                />
+
+            <Button
+                android:id="@+id/communicate"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_span="1"
+                android:text="交流专区"
+                />
+
+            <Button
+                android:id="@+id/chapters"
+                android:layout_width="match_parent"
+                android:layout_span="1"
+                android:textColor="@color/white"
+                android:text="章节列表"
+                />
+        </TableRow>
+    </TableLayout>
+
+
+    <ListView
+        android:id="@+id/under_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+
+    </ListView>
+
+
+</LinearLayout>

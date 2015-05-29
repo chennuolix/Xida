@@ -9,7 +9,7 @@
         <TableRow>
 
             <Button
-                android:id="@+id/jflfj"
+                android:id="@+id/s"
                 />
 
         </TableRow>
