@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chennuo.siida.xida" >
+
+
+
+    <uses-sdk android:minSdkVersion="8"></uses-sdk>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.WAKE_LOCK"/>
+    <uses-permission android:name="ANDROID.PERMISSION.VIBRATE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_SETTINGS"/>
+    <uses-permission android:name="ANDROID.PERMISSION.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />;
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".IndexActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SampleActivity"></activity>
+        <activity android:name=".MySiida" android:label="我的悉达"></activity>
+        <activity android:name=".NewsCentre" android:label="消息中心"></activity>
+        <activity android:name=".SignupActivity" android:label="注册"></activity>
+        <activity android:name=".RegisterActivity" android:label="登录"></activity>
+        <meta-data android:value="555adb3067e58e6c34000228" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>
+    </application>
+</manifest>

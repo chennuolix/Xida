@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pack"
+    android:weightSum="1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:stretchColumns="0"
+        >
+        <TableRow>
+                <EditText
+                    android:id="@+id/register_phnum"
+                    android:background="@color/white"
+                    android:maxLines="1"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:hint="    输入你的手机号码"
+                    />
+                <Button
+                    android:id="@+id/gain_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="获取验证码"/>
+        </TableRow>
+    </TableLayout>
+
+            <EditText
+                android:id="@+id/verificate_num"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:maxLines="1"
+                android:hint="     请输入你的验证码 "
+                />
+
+            <Button
+                android:id="@+id/verificate_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="验   证"
+                />
+
+            <TextView
+                android:text="当设备第一次登录的时候"
+                android:textColor="@color/back_text"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:text="需要验证码，之后会自动登陆。"
+                android:textColor="@color/back_text"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pack">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="@string/app_description"/>-->
+        <ListView
+            android:id="@+id/list_of_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </ListView>
+
+    </LinearLayout>
+
+    <!-- The navigation drawer -->
+    <ListView
+        android:id="@+id/navdrawer"
+        android:layout_width="245dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#2B2B2B"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="true">
+    </ListView>
+
+</android.support.v4.widget.DrawerLayout>
