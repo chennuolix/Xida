@@ -12,9 +12,12 @@ import android.widget.TextView;
  */
 
 public class ViewHolder  {
-    private SparseArray<View> mViews;
-    private  int mPosition;
-    private View mConvertView;
+
+
+    protected SparseArray<View> mViews;
+    protected int mPosition;
+    protected View mConvertView;
+    protected int position;
 
     public ViewHolder(Context context,ViewGroup parent,int layoutId,int position){
 
