@@ -5,16 +5,16 @@ package com.chennuo.siida.xida;
  */
 public class Video {
 
-//    private String name;
+//    private String Url;
     private int imageId;
 
     public Video(int imageId) {
-//        this.name = name;
+//        this.Url = url;
         this.imageId = imageId;
     }
 
-//    public String getName() {
-//        return name;
+//    public String getUrl() {
+//        return Url;
 //    }
 
     public int getImageId() {

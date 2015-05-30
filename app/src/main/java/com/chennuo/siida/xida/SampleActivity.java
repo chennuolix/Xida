@@ -171,7 +171,6 @@ public class SampleActivity extends BaseActivity {
         });
 
 
-
         initVideo();    //初始化视频列表
         initView();
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -179,6 +178,7 @@ public class SampleActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
+
                         Intent intent = new Intent(SampleActivity.this, VideoPlayerActivity.class);
                         startActivity(intent);
                         break;
