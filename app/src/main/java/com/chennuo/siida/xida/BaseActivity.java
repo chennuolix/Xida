@@ -43,4 +43,41 @@ public class BaseActivity extends Activity {
         ActivityCollector.removeActivity(this);
     }
 
+    /**
+     *
+     * @param url
+     * @param l
+     */
+    protected void get(String url, RequestListener l) {
+        get(url, null, l);
+    }
+
+    /**
+     *
+     * @param url
+     * @param params
+     * @param l
+     */
+    protected void get(String url, RequestParams params, RequestListener l) {
+        RequestManager.get(url, this, params, l);
+    }
+
+    /**
+     *
+     * @param url
+     * @param l
+     */
+    protected void post(String url, RequestListener l) {
+        post(url, null, l);
+    }
+
+    /**
+     *
+     * @param url
+     * @param params
+     * @param l
+     */
+    protected void post(String url, RequestParams params, RequestListener l) {
+        RequestManager.post(url, this, params, l);
+    }
 }
