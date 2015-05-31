@@ -1,11 +1,12 @@
-package volley;
+package com.chennuo.siida.xida;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Build;
-import com.android.volley.toolbox.ImageLoader;
 import android.os.Build.VERSION;
 import android.support.v4.util.LruCache;
+
+import com.android.volley.toolbox.ImageLoader;
 
 /**
  * 
