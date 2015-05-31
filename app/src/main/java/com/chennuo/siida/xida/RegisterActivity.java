@@ -73,18 +73,10 @@ public class RegisterActivity extends BaseActivityForMenu {
         };
 
 
-        /*
-        *   设置“获取验证码”按钮的点击事件——发送post请求
-        */
-        button_gain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mQueue.add(stringRequest_post);
-            }
-        });
+
 
         /*
-             从服务器获得验证码
+               从服务器获得验证码
         */
         final StringRequest stringRequest_get = new StringRequest("https://www.baidu.com",
                 new Response.Listener<String>() {
@@ -100,13 +92,27 @@ public class RegisterActivity extends BaseActivityForMenu {
             }
         });
 
+
+
         /*
-           设置“验证”按钮的点击事件——发送get请求
+        *      设置“获取验证码”按钮的点击事件——发送post请求，get请求
+        */
+        button_gain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mQueue.add(stringRequest_post);
+
+                mQueue.add(stringRequest_get);
+            }
+        });
+
+
+        /*
+               设置“验证”按钮的点击事件——验证
         */
         button_verificate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mQueue.add(stringRequest_get);
                 register_num = editText_register.getText().toString();
                 Log.d("验证码:",register_num);
                 editor = pref.edit();

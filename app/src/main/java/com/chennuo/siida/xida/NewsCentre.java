@@ -15,6 +15,7 @@ public class NewsCentre extends BaseActivityForMenu {
     private ListView mListViewNews;
     private List<News> mNews;
     private NewsAdapter newsAdapter;
+    private boolean ismessage;
 
 
     @Override
